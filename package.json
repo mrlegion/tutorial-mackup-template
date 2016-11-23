@@ -1,5 +1,5 @@
 {
-  "name": "portfolio",
+  "name": "learning-mackup-template",
   "version": "0.1.0",
   "description": "Create base tamplate for makeup",
   "main": "gulpfile.js",
@@ -34,5 +34,13 @@
     "gulp-stylus": "^2.6.0",
     "gulp-yaml": "^1.0.1",
     "run-sequence": "^1.2.2"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mrlegion/tutorial-mackup-template.git"
+  },
+  "bugs": {
+    "url": "https://github.com/mrlegion/tutorial-mackup-template/issues"
+  },
+  "homepage": "https://github.com/mrlegion/tutorial-mackup-template#readme"
 }
