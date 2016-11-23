@@ -1,0 +1,17 @@
+---
+  config:
+    project: "Learning Template"
+    lang: "en"
+
+    paths:
+      images: "assets/images"
+      javascripts: "javascripts"
+      stylesheets: "stylesheets"
+      svg: "assets/images/svg"
+      library: "assets/libs"
+
+    fonts:
+      opensans: "https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700&amp;subset=cyrillic"
+      pacifico: "https://fonts.googleapis.com/css?family=Pacifico"
+      sourcesan: "https://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,600"
+      robotostab: "https://fonts.googleapis.com/css?family=Roboto+Slab:100,300,400,700&amp;subset=cyrillic,cyrillic-ext"
