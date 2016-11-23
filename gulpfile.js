@@ -71,7 +71,7 @@ gulp.task('stylus' , function() {
     return gulp.src(['*.styl' , '!_*.styl'] , { cwd : './app/stylus' })
         .pipe(stylus(options.stylus))
         .pipe(autoprefixer(options.autoprefixer))
-        .pipe(gulp.dest('./dest/assets/stylesheets'))
+        .pipe(gulp.dest('./dest/stylesheets'))
         .pipe(browser.reload({stream : true}));
 });
 
@@ -110,11 +110,42 @@ gulp.task('jade' , function() {
         .pipe(browser.reload({stream : true}));
 });
 
+// Scripts task
+gulp.task('scripts' , function() {
+    return gulp.src(['**/*.js' , '!**/_*.js'] , { cwd : './app/javascript' })
+        .pipe(flatten())
+        .pipe(concat('core.js'))
+        .pipe(gulp.dest('./dest/javascript/'))
+        .pipe(browser.reload({stream: true}));
+});
+
 // Transfer library tasks
 gulp.task('images' , function() {
     return gulp.src(['**/*.{jpg,jpeg,png,gif}' , '!**/_*.{jpg,jpeg,png,gif}'] , { cwd : '.app/assets' })
         .pipe(cache(imagemin({progressive: true})))
-        .pipe(gulp.dest('./dest/assets'));
+        .pipe(gulp.dest('./dest/assets'))
+        .pipe(browser.reload({stream: true}));
+});
+
+gulp.task('svg' , function() {
+    return gulp.src(['**/*.svg' , '!**/_*.svg'] , { cwd : './app/assets/' })
+        .pipe(gulp.dest('./dest/assets/'))
+        .pipe(browser.reload({stream: true}));
+});
+
+gulp.task('lib-scripts' , function() {
+    return gulp.src('**/*.js', { cwd : './app/assets/' })
+        .pipe(flatten())
+        .pipe(gulp.dest('./dest/javascripts/libs/'))
+        .pipe(browser.reload({stream: true}));
+});
+
+gulp.task('lib-styles' , function() {
+    return gulp.src('**/*.js', { cwd : './app/assets/' })
+        .pipe(rename({suffix: '.min'}))
+        .pipe(flatten())
+        .pipe(gulp.dest('./dest/stylesheets/libs/'))
+        .pipe(browser.reload({stream: true}));
 });
 
 // SERVER TASK
@@ -138,6 +169,17 @@ gulp.task('html' , function (cb) {
     );
 });
 
+// Library transfer task
+gulp.task('assets' , function (cb) {
+    return run(
+        'images',
+        'svg',
+        'lib-scripts',
+        'lib-styles',
+        cb
+    );
+});
+
 // MAIN TASK
 // Build project task
 gulp.task('build' , function(cb) {
@@ -150,4 +192,42 @@ gulp.task('build' , function(cb) {
         'stylus',
         cb
     );
+});
+
+// Develop task (use when codding)
+gulp.task('dev' , function(cb) {
+    return run(
+        'build',
+        [
+            'browser-sync',
+            'watch'
+        ],
+        cb
+    );
+});
+
+// Watchers task
+// Watch
+gulp.task('watch' , function(cb) {
+
+    // Modules, pages
+    gulp.watch('./app/**/*.jade' , ['jade']);
+
+    // Modules data
+    gulp.watch(['./app/data/*.{json,yml}'] , ['html']);
+
+    // Statics styles
+    gulp.watch('./app/stylus/**/*.styl' , ['stylus']);
+
+    // Scripts file
+    gulp.watch('./app/javascript/**/*.js' , ['scripts']);
+
+    // Images file
+    gulp.watch('./app/assets/images/**/*.{jpg,jpeg,png,gif}' , ['images']);
+
+    // SVG file
+    gulp.watch('./app/assets/svg/**/*.svg' , ['svg']);
+
+    // Assets file
+    gulp.watch('./app/assets/**/*' , ['assets']);
 });
