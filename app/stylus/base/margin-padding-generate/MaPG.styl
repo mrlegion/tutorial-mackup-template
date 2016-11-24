@@ -23,7 +23,7 @@ get-margin(start, end, step, position)
     for i in 0..(length(pos) - 1)
         temp = position-check(pos[i])
         for j in range(s, e, step)
-            .m{substr(temp, 0, 1)} -{j}
+            .m{substr(temp, 0, 1)}-{j}
                 margin-{temp} j
 
 //- padding generate
@@ -36,7 +36,7 @@ get-padding(start, end, step, position)
     for i in 0..(length(pos) - 1)
         temp = position-check(pos[i])
         for j in range(s, e, step)
-            .p{substr(temp, 0, 1)} -{j}
+            .p{substr(temp, 0, 1)}-{j}
                 padding-{temp} j
 
 //-/////////////////////
