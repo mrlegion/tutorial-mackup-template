@@ -1,0 +1,8 @@
+---
+  head:
+    title: "Learning template for makeup"
+    mobile: false
+    meta:
+      author: "Alexander Borovskikh"
+      description: "Learning template for tutorial on makeup"
+      keywords: "learning, html, css, tutorial"

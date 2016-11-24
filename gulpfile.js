@@ -77,14 +77,14 @@ gulp.task('stylus' , function() {
 
 // Data json and yml task
 gulp.task('yaml' , function() {
-    return gulp.src(['**/*.yml' , '!**/_*.yml'] , { cwd : './app/data' })
+    return gulp.src(['**/*.yml' , '!**/_*.yml'] , { cwd : './app/jade' })
         .pipe(yaml({space: '\t'}))
         .pipe(merge('data-yaml.json'))
         .pipe(gulp.dest('./tmp/data'));
 });
 
 gulp.task('json' , function() {
-    return gulp.src(['**/*.json' , '!**/_*.json'] , { cwd : './app/data' })
+    return gulp.src(['**/*.json' , '!**/_*.json'] , { cwd : './app/jade' })
         .pipe(merge('data-json.json'))
         .pipe(gulp.dest('./tmp/data'));
 });
@@ -214,7 +214,7 @@ gulp.task('watch' , function(cb) {
     gulp.watch('./app/**/*.jade' , ['jade']);
 
     // Modules data
-    gulp.watch(['./app/data/*.{json,yml}'] , ['html']);
+    gulp.watch(['./app/jade/*.{json,yml}'] , ['html']);
 
     // Statics styles
     gulp.watch('./app/stylus/**/*.styl' , ['stylus']);
