@@ -1,0 +1,9 @@
+//- font-size generate
+get-font-size(list)
+  l = (list is a 'unit') ? list : (convert(list) is a 'unit') ? convert(list) : error('Type error. Expect unit, but ' + list + ' is ' + typeof(list))
+
+  for i in 0..(length(l) - 1)
+    .fs-{l[i]}
+      font-size unit(l[i], 'px')
+
+get-font-size($font-size-list)
