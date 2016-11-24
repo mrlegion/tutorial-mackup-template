@@ -135,15 +135,15 @@ gulp.task('svg' , function() {
 
 gulp.task('lib-scripts' , function() {
     return gulp.src('**/*.js', { cwd : './app/assets/' })
-        .pipe(flatten())
+        // .pipe(flatten())
         .pipe(gulp.dest('./dest/javascripts/libs/'))
         .pipe(browser.reload({stream: true}));
 });
 
 gulp.task('lib-styles' , function() {
-    return gulp.src('**/*.js', { cwd : './app/assets/' })
-        .pipe(rename({suffix: '.min'}))
-        .pipe(flatten())
+    return gulp.src('**/*.css', { cwd : './app/assets/' })
+        // .pipe(rename({suffix: '.min'}))
+        // .pipe(flatten())
         .pipe(gulp.dest('./dest/stylesheets/libs/'))
         .pipe(browser.reload({stream: true}));
 });
