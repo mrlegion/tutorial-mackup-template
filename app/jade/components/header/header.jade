@@ -4,12 +4,14 @@ mixin header(data)
             .container
                 .row
                     .col-md-8
-                        h1.info-title= data.title
-                        h4.info-undertitle= data.undertitle
+                        h1.info-title.pacifico-font= data.title
+                        h4.info-undertitle.mt-40= data.undertitle
                         p.info-description= data.desc
-                        .caption.mt-20
-                            span.caption-name= data.name
+                        .caption.mt-20.fs-14
+                            span.caption-name.font-color-alizarin.font-semibold.
+                                <svg><use xlink:href="assets/svg/sprite.svg#brackets"></use></svg>
+                                #{data.name}
                             span.caption-email= data.email
-                        a.button(href="#")= data.button
+                        a.button.button-enroll.button-alizarin.button-rounded.mt-40(href="#")= data.button
 
         .bg-image
