@@ -4,7 +4,8 @@ mixin menu-navigtion(data)
             svg
                 use(xlink:href="assets/svg/sprite.svg#logotype")
         .menu-link
-            ul
+            ul.horizontal
                 for link in data
-                    li
+                    li.list-style-none
                         a(href=link.link)= link.title
+            a.button.button-alizarin.button-rounded.button-enroll(href="#") contact us

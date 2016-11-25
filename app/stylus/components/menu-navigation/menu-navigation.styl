@@ -5,6 +5,32 @@
     background-color: #fff
     border-bottom: 3px solid #ccc
 
-    svg
-        width: 152px
-        height: 50px
+    .menu-header
+        display: inline-block
+        svg
+            width: 152px
+            height: 50px
+
+    .menu-link
+        width: auto
+        display: inline-block
+        float: right
+
+        li
+            padding: 0 10px
+
+            &:not(:last-child):after
+                content: '~'
+                display: inline-block
+                padding-left: 20px
+
+            a
+                @extend .roboto-stab-font
+                @extend .font-regular
+                letter-spacing: 1px
+                font-size: 14px
+                text-transform: uppercase
+                color: dark-text
+
+        .button
+            display: inline-block
