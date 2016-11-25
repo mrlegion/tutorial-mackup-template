@@ -1,0 +1,192 @@
+//- Mixins
+button-style(
+    color,
+    color-hover,
+    background,
+    background-hover,
+    border,
+    border-hover
+)
+    &
+    &:visited
+        color color
+        background-color background
+        if border
+            border border
+
+    &:focus
+    &:hover
+    &:active
+        if color-hover
+            color color-hover
+        else
+            color color
+
+        if background-hover
+            background-color background-hover
+        else
+            background-color background - 10%
+
+        if border-hover
+            border-color border-hover
+        else
+            if border
+                border border
+
+    &:active
+        background-image none
+
+    &.button
+        &-disabled
+        &[disabled]
+            &
+            &:hover
+            &:focus
+            &:active
+                color color
+                background-color background-hover
+                if border
+                    border border
+
+button-size( padding, font-size, line-height = false )
+    padding padding
+    font-size font-size
+    if line-height
+        line-height line-height
+
+//- Button class main
+.button
+    display inline-block
+    font-weight 600
+    text-align center
+    text-transform: lowercase
+    letter-spacing: 1px
+    touch-action manipulation
+    cursor pointer
+    font-family: 'Open Sans', sans-serif
+    border-radius 0
+    white-space nowrap
+    line-height normal
+    -webkit-user-drag none
+    -webkit-user-select none
+    -moz-user-select none
+    -ms-user-select none
+    user-select none
+    box-sizing border-box
+    text-decoration none
+    background-color transparent
+    padding 0
+    transition all 125ms ease-in-out
+
+    &:hover
+    &:focus
+        background-color #333333
+        text-decoration none
+
+    &-disabled
+    &[disabled]
+        &
+        &:hover
+        &:focus
+        &:active
+            opacity 0.65
+            box-shadow none
+            outline none
+
+//- Size
+.button
+.button-normal
+    button-size(
+            padding: 12px 25px,
+            font-size: 12px,
+            line-height: false
+    )
+
+.button-price
+    button-size(
+            padding: 10px 30px,
+            font-size: 10px,
+            line-height: false
+    )
+
+.button-enroll
+    button-size(
+            padding: 8px 20px,
+            font-size: 14px,
+            line-height: false
+    )
+
+//- Style and colors
+.button-rounded
+    border-radius 50px
+
+.button-solid
+.button-gray
+    button-style(
+            color: #666,
+            color-hover: false,
+            background: #ebebeb,
+            background-hover: #f5f5f5,
+            border: false,
+            border-hover: false
+    )
+
+.button-alizarin
+    button-style(
+            color: #fff,
+            color-hover: false,
+            background: alizarin,
+            background-hover: false,
+            border: 3px solid (alizarin - 30%),
+            border-hover: false
+    )
+
+.button-asbestos
+    button-style(
+            color: #fff,
+            color-hover: false,
+            background: asbestos,
+            background-hover: false,
+            border: false,
+            border-hover: false
+    )
+
+.button-wisteria
+    button-style(
+            color: #fff,
+            color-hover: false,
+            background: wisteria,
+            background-hover: false,
+            border: false,
+            border-hover: false
+    )
+
+.button-peter-river
+    button-style(
+            color: #fff,
+            color-hover: false,
+            background: peter-river,
+            background-hover: false,
+            border: false,
+            border-hover: false
+    )
+
+.button-turauoise
+    button-style(
+            color: #fff,
+            color-hover: false,
+            background: turauoise,
+            background-hover: false,
+            border: false,
+            border-hover: false
+    )
+
+.button-emerald
+    button-style(
+            color: #fff,
+            color-hover: false,
+            background: emerald,
+            background-hover: false,
+            border: false,
+            border-hover: false
+    )
