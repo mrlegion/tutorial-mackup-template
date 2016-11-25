@@ -121,7 +121,7 @@ gulp.task('scripts' , function() {
 
 // Transfer library tasks
 gulp.task('images' , function() {
-    return gulp.src(['**/*.{jpg,jpeg,png,gif}' , '!**/_*.{jpg,jpeg,png,gif}'] , { cwd : '.app/assets' })
+    return gulp.src(['**/*.{jpg,jpeg,png,gif}' , '!**/_*.{jpg,jpeg,png,gif}'] , { cwd : './app/assets' })
         .pipe(cache(imagemin({progressive: true})))
         .pipe(gulp.dest('./dest/assets'))
         .pipe(browser.reload({stream: true}));
@@ -217,13 +217,13 @@ gulp.task('watch' , function(cb) {
     gulp.watch(['./app/jade/*.{json,yml}'] , ['html']);
 
     // Statics styles
-    gulp.watch('./app/stylus/**/*.styl' , ['stylus']);
+    gulp.watch('./app/stylus/**/**/**/*.styl' , ['stylus']);
 
     // Scripts file
     gulp.watch('./app/javascript/**/*.js' , ['scripts']);
 
     // Images file
-    gulp.watch('./app/assets/images/**/*.{jpg,jpeg,png,gif}' , ['images']);
+    gulp.watch('./app/assets/images/**/*.{ jpg,jpeg,png,gif }' , ['images']);
 
     // SVG file
     gulp.watch('./app/assets/svg/**/*.svg' , ['svg']);
