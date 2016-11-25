@@ -1,0 +1,6 @@
+mixin menu-navigtion(data)
+    nav.menu-navigation
+        ul
+            for link in data
+                li
+                    a(href=link.link)= link.title
