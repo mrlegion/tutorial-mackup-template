@@ -4,9 +4,9 @@ mixin header(data)
             .container
                 .row
                     .col-md-8
-                        h1= data.title
-                        h4= data.undertitle
-                        p= data.desc
+                        h1.info-title= data.title
+                        h4.info-undertitle= data.undertitle
+                        p.info-description= data.desc
                         .caption.mt-20
                             span.caption-name= data.name
                             span.caption-email= data.email
