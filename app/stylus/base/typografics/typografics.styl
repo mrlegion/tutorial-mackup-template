@@ -1,0 +1,112 @@
+// Base Fonts Controllers Class
+.open-sans-font
+    font-family 'Open Sans', sans-serif
+
+.source-san-pro-font
+    font-family 'Source Sans Pro', sans-serif
+
+.roboto-stab-font
+    font-family 'Roboto Slab', serif
+
+.pacifico-font
+    font-family 'Pacifico', cursive
+
+// Font Weight Controller Class
+.font-weight-300
+.font-light
+    font-weight: 300
+
+.font-weight-400
+.font-regular
+    font-weight: 400
+
+.font-weight-600
+.font-semibold
+    font-weight: 600
+
+.font-weight-700
+.font-bold
+    font-weight: 700
+
+// Heading Base Controllers Class
+//- @extend helper classes
+$hbase-h1-h3-margin
+    margin-top: 20px
+    margin-bottom: 10px
+
+$hbase-h4-h6-margin
+    margin-top: 10px
+    margin-bottom: 10px
+
+$hbase
+    @extends .open-sans-font, .font-semibold
+    color: $headings-font-color
+
+$hsmall
+    @extends .font-light
+    color: dark-text
+    margin-top: 5px
+//- @end
+
+h1
+    font-size: 36px
+    line-height: 45px
+    @extends $hbase, $hbase-h1-h3-margin
+
+    & small
+        font-size: 50%
+        @extends $hsmall
+
+h2
+    font-size: 30px
+    line-height: 40px
+    @extends $hbase, $hbase-h1-h3-margin
+
+    & small
+        font-size: 60%
+        @extends $hsmall
+
+h3
+    font-size: 24px
+    line-height: 35px
+    @extends $hbase, $hbase-h1-h3-margin
+
+    & small
+        font-size: 70%
+        @extends $hsmall
+
+h4
+    font-size: 18px
+    line-height: 30px
+    @extends $hbase, $hbase-h4-h6-margin
+
+    & small
+        font-size: 80%
+        @extends $hsmall
+
+h5
+    font-size: 14px
+    line-height: 25px
+    @extends $hbase, $hbase-h4-h6-margin
+
+    & small
+        font-size: 90%
+        @extends $hsmall
+
+h6
+    font-size: 12px
+    line-height: 20px
+    @extends $hbase, $hbase-h4-h6-margin
+
+    & small
+        font-size: 90%
+        @extend $hsmall
+
+// Text Transform Controller Classes
+.text
+    &-capitalize
+        text-transform: capitalize
+    &-uppercase
+        text-transform: uppercase
+    &-lowercase
+        text-transform: lowercase
