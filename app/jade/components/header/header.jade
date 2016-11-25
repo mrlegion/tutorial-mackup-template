@@ -2,10 +2,14 @@ mixin header(data)
     header#header.header
         .container
             .row
-                .col-md-6
-                    h1= data.title
-                    p #{data.undertitle}
-                        span= data.desc
-                    span= data.name
-                    span= data.email
-                    a(href="#")= data.button
+                .col-md-8
+                    .header-information
+                        h1= data.title
+                        h4= data.undertitle
+                        p= data.desc
+                        .caption.mt-20
+                            span.caption-name= data.name
+                            span.caption-email= data.email
+                        a.button(href="#")= data.button
+
+        .bg-image
