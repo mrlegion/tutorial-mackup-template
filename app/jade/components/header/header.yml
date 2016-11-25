@@ -1,0 +1,11 @@
+---
+  header:
+    title: "Learning course html and css"
+    undertitle: "Master a technology html5 and css3 today"
+    desc: "Nulla at aliquet purus. Fusce in massa leo. Nam iaculis, est accumsan placerat sodales,
+           neque lectus rhoncus velit, eleifend tempor mi lorem in magna. In est dui, pretium vitae maximus vitae,
+           dictum at metus. Etiam scelerisque nunc at tellus congue consequat. Quisque sed metus luctus,
+           dapibus augue eu, vehicula velit. Curabitur cursus risus eu convallis convallis. "
+    name: "Mauris consectetur"
+    email: "example@mail.ru"
+    button: "enroll"

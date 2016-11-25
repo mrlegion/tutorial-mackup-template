@@ -1,0 +1,58 @@
+//-/////////////////////
+//- MIXINS
+//-/////////////////////
+
+//- position check
+position-check(position)
+    pos = convert(position)
+    list = left right bottom top
+    num = index(list, pos)
+
+    if list[num]
+        return list[num]
+    else
+        error('Unknow position: ' + pos)
+
+//- margin generate
+get-margin(start, end, step, position)
+    s = (start is a 'unit') ? start:(convert(start) is a 'unit') ? convert(start) : error('Type error. Expect unit, but ' + start + ' is ' + typeof(start))
+    e = (end is a 'unit') ? end:(convert(end) is a 'unit') ? convert(end) : error('Type error. Expect unit, but ' + end + ' is ' + typeof(end))
+    step = (step is a 'unit') ? step:(convert(step) is a 'unit') ? convert(step) : error('Type error. Expect unit, but ' + step + ' is ' + typeof(step))
+    pos = (position is a 'ident') ? position:convert(position)
+
+    for i in 0..(length(pos) - 1)
+        temp = position-check(pos[i])
+        for j in range(s, e, step)
+            .m{substr(temp, 0, 1)}-{j}
+                margin-{temp} j
+
+//- padding generate
+get-padding(start, end, step, position)
+    s = (start is a 'unit') ? start:(convert(start) is a 'unit') ? convert(start) : error('Type error. Expect unit, but ' + start + ' is ' + typeof(start))
+    e = (end is a 'unit') ? end:(convert(end) is a 'unit') ? convert(end) : error('Type error. Expect unit, but ' + end + ' is ' + typeof(end))
+    step = (step is a 'unit') ? step:(convert(step) is a 'unit') ? convert(step) : error('Type error. Expect unit, but ' + step + ' is ' + typeof(step))
+    pos = (position is a 'ident') ? position:convert(position)
+
+    for i in 0..(length(pos) - 1)
+        temp = position-check(pos[i])
+        for j in range(s, e, step)
+            .p{substr(temp, 0, 1)}-{j}
+                padding-{temp} j
+
+//-/////////////////////
+//- CALL MIXIN
+//-/////////////////////
+
+get-padding(
+        padding-start,
+        padding-end,
+        padding-step,
+        padding-side
+)
+
+get-margin(
+        margin-start,
+        margin-end,
+        margin-step,
+        margin-side
+)
