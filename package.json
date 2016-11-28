@@ -1,6 +1,6 @@
 {
   "name": "learning-mackup-template",
-  "version": "0.1.0",
+  "version": "0.1.3",
   "description": "Create base tamplate for makeup",
   "main": "gulpfile.js",
   "scripts": {
