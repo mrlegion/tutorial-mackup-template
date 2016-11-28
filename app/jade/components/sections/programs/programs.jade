@@ -1,0 +1,15 @@
+mixin programs-advantages-block(data)
+    for item in data
+        .col-md-4.col-xs-12
+            .advantages
+                svg: use(xlink:href="assets/svg/sprite.svg##{item.icon}")
+                h4= item.title
+                p.fs-14= item.desc
+
+mixin programs-section-block(data)
+    section#programs
+        .container
+            .row
+                +section-title-block(data.programs)
+            .row.mt-50
+                +programs-advantages-block(data.prgrmlist)

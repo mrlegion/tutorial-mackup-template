@@ -1,0 +1,24 @@
+---
+  sectionprograms:
+    programs:
+      title: "Do you want to learn how to program?"
+      undertitle: "Get access to tutorials. Talk and learn from leading IT-specialists."
+    prgrmlist:
+      -
+        title: "Online learning"
+        desc: "Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.
+               Maecenas pharetra ut massa finibus ullamcorper. Pellentesque habitant morbi tristique senectus
+               et netus et malesuada fames ac turpis egestas."
+        icon: "on-line-learning"
+      -
+        title: "Only practical knowledge"
+        desc: "Proin sed vehicula purus. Fusce scelerisque egestas dapibus. Vestibulum ante ipsum primis in
+               faucibus orci luctus et ultrices posuere cubilia Curae; Vivamus efficitur enim sed mi imperdiet,
+               sit amet euismod purus porttitor. Etiam velit leo, accumsan ut lobortis ac, viverra a odio."
+        icon: "lvl-up"
+      -
+        title: "IT-community"
+        desc: "Mauris accumsan ipsum nec arcu luctus mattis. Ut tempus justo vel erat mollis consequat.
+               In pulvinar ultricies quam at commodo. Cras eget laoreet ante. Vestibulum at convallis mi.
+               Donec lorem est, tempus varius luctus vitae, facilisis at tellus."
+        icon: "it-tech"
