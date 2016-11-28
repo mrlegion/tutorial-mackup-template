@@ -1,0 +1,47 @@
+.teacher
+    &-container
+        background-color: #fff
+        box-shadow: 0 0 10px rgba(0,0,0,.3)
+        border-radius: 5px
+        display: inline-block
+        overflow: hidden
+        transition: box-shadow .3s ease
+
+        &:hover
+            box-shadow 0 0 40px rgba(0,0,0,.5)
+            cursor: pointer
+
+    &-header
+        position: relative
+        width: 100%
+        height: 185px
+        overflow: hidden
+
+        img
+            display: block
+            position: absolute
+            top: 50%
+            left: 50%
+            max-width: none
+            max-height none
+            min-width: 100%
+            min-height: 100%
+            transform: translate(-50%, -50%)
+
+    &-content
+        padding: 20px
+
+        h3
+            padding: 0
+            margin: 0
+            line-height: 1.2
+            font-weight: 400
+
+        .location
+            font-size: 14px
+            color: dark-text
+            display: block
+            font-weight: 400
+
+        .content-text
+            font-size: 14px
