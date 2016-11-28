@@ -1,0 +1,11 @@
+mixin menu-navigtion(data)
+    nav.menu-navigation
+        .menu-header
+            svg
+                use(xlink:href="assets/svg/sprite.svg#logotype")
+        .menu-link
+            ul.horizontal
+                for link in data
+                    li.list-style-none
+                        a(href=link.link)= link.title
+            a.button.button-alizarin.button-rounded.button-enroll.ml-40(href="#") contact us

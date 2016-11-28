@@ -1,0 +1,14 @@
+---
+  menu:
+    -
+      title: "Home"
+      link: "#home"
+    -
+      title: "About Us"
+      link: "#about"
+    -
+      title: "Us Teacher"
+      link: "#teacher"
+    -
+      title: "Registration"
+      link: "#registration"
