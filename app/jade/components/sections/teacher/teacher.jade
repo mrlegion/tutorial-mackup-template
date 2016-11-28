@@ -1,0 +1,19 @@
+mixin teacher-block(data)
+    for item in data
+        .col-md-3.col-sm-6.col-xs-12
+            .teacher-container
+                .teacher-header: img(src="assets/images/#{item.image}", alt="#{item.name}")
+                .teacher-content
+                    h3.font-color-alizarin= item.name
+                        small.location.font-color-dark-text.
+                            <svg><use xlink:href="assets/svg/sprite.svg#location"></use></svg>
+                            #{item.location}
+                    p.content-text.font-color-dark-text= item.desc
+
+mixin teacher-section-block(data)
+    section#teacher.background-alizarin
+        .container
+            .row
+                +section-title-block(data.heading)(class="font-color-white")
+            .row.mt-30
+                +teacher-block(data.list)
