@@ -5,23 +5,27 @@
       undertitle: "All our teachers have a wealth of knowledge and experience on the shoulders"
     list:
       -
+        image: "placeholder_450_x_300.jpg"
         name: "Jon Dowh"
         location: "USA, Washington DC, 32 year"
         desc: "Nullam ornare accumsan ipsum, vitae accumsan mi iaculis sit amet. Lorem ipsum dolor sit amet, consectetur
                adipiscing elit.In pulvinar ultricies quam at commodo. Cras eget laoreet ante. Vestibulum at convallis mi."
       -
+        image: "placeholder_450_x_300.jpg"
         name: "Alisiya Witson"
         location: "USA, New-York, 28 year"
         desc: "Ut mollis eleifend euismod. In faucibus elit lobortis purus tristique ornare eu eget eros.
                Aliquam porttitor, ipsum a rutrum commodo, metus est venenatis tortor, aliquam fringilla eros
                dui ac enim. Nunc egestas vestibulum ante."
       -
+        image: "placeholder_450_x_300.jpg"
         name: "Nikita Sherbinch"
         location: "Russia, Moskow, 25 year"
         desc: "Aenean in ante quis nulla semper ullamcorper. Proin id aliquet felis.
                Aenean imperdiet scelerisque augue, sit amet scelerisque ligula finibus vel.
                Donec orci diam, efficitur sed est non, maximus feugiat orci."
       -
+        image: "placeholder_450_x_300.jpg"
         name: "Jon Smith"
         location: "USA, Washington DC, 22 year"
         desc: "Cras egestas pharetra ligula, id ullamcorper diam facilisis ac.
