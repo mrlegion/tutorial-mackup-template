@@ -1,4 +1,4 @@
 mixin section-title-block(data)
-    .col-md-8.col-xs-12.col-md-offset-2.text-center
+    .col-md-8.col-xs-12.col-md-offset-2.text-center&attributes(attributes)
         h3.section-heading&attributes(attributes)= data.title
             small.section-desc= data.undertitle
