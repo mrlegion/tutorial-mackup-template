@@ -1,0 +1,19 @@
+mixin programs-advantages-block()
+    .col-md-4.col-xs-12
+        .advantages
+            svg: use(xlink:href="assets/svg/sprite.svg#it-tech")
+            h4 Online learning
+            p.
+                Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.
+                Maecenas pharetra ut massa finibus ullamcorper. Pellentesque habitant morbi tristique senectus
+                et netus et malesuada fames ac turpis egestas.
+
+mixin programs-section-block()
+    section#programs
+        .container
+            .row
+                +section-title-block(section.programs)
+            .row
+                +programs-advantages-block()
+                +programs-advantages-block()
+                +programs-advantages-block()
