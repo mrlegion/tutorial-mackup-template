@@ -1,9 +1,9 @@
 mixin course-inner-block(data)
     for item in data
         .col-md-4.col-sm-6.col-xs-12
-            a(href="#{item.link}")
+            a.course(href="#{item.link}")
                 .course-container
-                    h4= item.title
+                    h3.title= item.title
                     svg: use(xlink:href="assets/svg/sprite.svg##{item.icon}")
 
 mixin course-block(data)
