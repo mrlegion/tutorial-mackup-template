@@ -11,7 +11,7 @@ mixin teacher-block(data)
                     p.content-text.font-color-dark-text= item.desc
 
 mixin teacher-section-block(data)
-    section#teacher.background-alizarin
+    section#teacher&attributes(attributes)
         .container
             .row
                 +section-title-block(data.heading)(class="font-color-white")

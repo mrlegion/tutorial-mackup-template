@@ -1,0 +1,35 @@
+---
+  course:
+    heading:
+      title: "Our best courses"
+      undertitle: "We give you the knowledge of the most modern and advanced technologies in the development of the world"
+
+    list:
+      -
+        rows:
+          -
+            title: "PHP Senior Programmer"
+            link: "#"
+            icon: "php-course"
+          -
+            title: "Java Senior Programmer"
+            link: "#"
+            icon: "java-course"
+          -
+            title: "HTML5 and CSS3 Programmer"
+            link: "#"
+            icon: "html-course"
+      -
+        rows:
+          -
+            title: "C# Senior Programmer"
+            link: "#"
+            icon: "csharp-course"
+          -
+            title: "Web - master Programmer"
+            link: "#"
+            icon: "web-course"
+          -
+            title: "iOS Senior Programmer"
+            link: "#"
+            icon: "apple-course"
