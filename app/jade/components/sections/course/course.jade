@@ -1,0 +1,19 @@
+mixin course-inner-block(data)
+    for item in data
+        .col-md-4.col-sm-6.col-xs-12
+            a(href="#{item.link}")
+                .course-container
+                    h4= item.title
+                    svg: use(xlink:href="assets/svg/sprite.svg##{item.icon}")
+
+mixin course-block(data)
+    for row in data
+        .row
+            +course-inner-block(row.rows)
+
+mixin course-section-block(data)
+    section#course&attributes(attributes)
+        .container
+            .row
+                +section-title-block(data.heading)
+            +course-block(data.list)
