@@ -1,0 +1,18 @@
+mixin registration-section-block(data)
+    section#registration&attributes(attributes)
+        .container
+            .row
+                +section-title-block(data.heading)
+            .row.mt-50
+                .col-md-6.col-xs-12
+                    .registation-image.mt-40
+                        svg: use(xlink:href="##{data.images}")
+                .col-md-4.col-md-offset-2.col-xs-12
+                    .registration-form-container
+                        form
+                            h3.text-left.mb-30 Free Registration
+                            input(type="text", name="name", id="name", value="your name")
+                            input(type="text", name="email", id="email", value="your email address")
+                            button(type="button", name="registration", id="registration").button-rounded.button-form.button-gray.float-left help me
+                            button(type="button", name="registration", id="registration").button-rounded.button-form.button-registration registration
+                            p.license= data.license
