@@ -1,0 +1,18 @@
+---
+  footer:
+    social:
+      -
+        icon: "facebook-footer-ico"
+        link: "#"
+      -
+        icon: "github-footer-ico"
+        link: "#"
+      -
+        icon: "twitter-footer-ico"
+        link: "#"
+      -
+        icon: "vimeo-footer-ico"
+        link: "#"
+      -
+        icon: "vk-footer-ico"
+        link: "#"
