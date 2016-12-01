@@ -13,6 +13,6 @@ mixin footer-block(data)
                 .col-md-12.col-xs-12
                     .social
                         for item in data.social
-                            a(href="#{icon.link}")
-                                svg: use(xlink:href="##{icon.icon}")
+                            a(href="#{item.link}")
+                                svg: use(xlink:href="##{item.icon}")
                     .copyright.mt-30 &copy; 2016. Alexander Borovskikh for learning
