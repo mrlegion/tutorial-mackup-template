@@ -1,9 +1,9 @@
 mixin footer-block(data)
-    footer#footer&attributes(attributes)
+    footer#footer.pt-75.pb-40&attributes(attributes)
         .container
             .row
                 .col-md-2.col-sm-2.col-xs-12
-                    h4 Newsletter
+                    h4.font-color-white Newsletter
                 .col-md-10.col-sm-10.col-xs-12
                     form(name="newsletter")
                         .input-newsletter-container
@@ -11,8 +11,8 @@ mixin footer-block(data)
                         a.button.button-rounded.button-gray subscribe
             .row.mt-40
                 .col-md-12.col-xs-12
-                    .social
+                    .social.text-center
                         for item in data.social
                             a(href="#{item.link}")
                                 svg: use(xlink:href="##{item.icon}")
-                    .copyright.mt-30 &copy; 2016. Alexander Borovskikh for learning
+                    .copyright.mt-20.text-center &copy; 2016. Alexander Borovskikh for learning
