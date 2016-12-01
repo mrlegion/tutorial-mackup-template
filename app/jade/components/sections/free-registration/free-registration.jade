@@ -1,0 +1,18 @@
+mixin registration-section-block(data)
+    section#registration&attributes(attributes)
+        .container
+            .row
+                +section-title-block(data.heading)
+            .row.mt-50
+                .col-md-6.col-xs-12
+                    .registation-image
+                        svg: use(xlink:href="##{data.images}")
+                .col-md-6.col-xs-12
+                    .registration-form-container
+                        form
+                            h3 Free Registration
+                            input(type="text")
+                            input(type="text")
+                            button.button-rounded.button.button-gray(value="help me")
+                            button.button-rounded.button.button-alizarin(value="registration")
+                            p.license= data.license
